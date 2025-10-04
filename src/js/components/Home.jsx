@@ -6,19 +6,22 @@ import { Navbar } from "./Navbar";
 import { Jumbotron } from "./Jumbotron";
 import { Card } from "./Card";
 import { Footer } from "./Footer";
+import { listCards } from "./listCards.js";
 
 //create your first component
 const Home = () => {
   return (
     <div className="text-center">
       <Navbar />
-      <div className="container">
+      <div className="container Contenido">
         <Jumbotron />
-        <div className="row">
-          <Card />
+        <div className="row" id="cardContainer">
+          {listCards.map((personaje, index) => (
+            <Card key={index} {...personaje} />
+          ))}
         </div>
       </div>
-      <Footer />
+      <Footer id="footer" />
     </div>
   );
 };

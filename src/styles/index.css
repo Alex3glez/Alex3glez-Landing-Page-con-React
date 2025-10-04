@@ -9,3 +9,45 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+html,
+body {
+  max-height: 100vh;
+}
+
+#root,
+.contenido {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#footer {
+  margin: 20px;
+}
+
+.Contenido {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+}
+.imagenCarrusel {
+  aspect-ratio: 16/9;
+  max-height: 400px;
+  min-height: 200px;
+}
+#cardContainer {
+  justify-content: space-around;
+  margin: 2em 0;
+  gap: 2em;
+}
